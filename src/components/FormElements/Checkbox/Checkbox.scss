@@ -1,0 +1,64 @@
+@import "../../../scss/variables";
+
+.checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  user-select: none;
+  color: $cl-cape-cod;
+  font-size: $size-14;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .check-mark {
+      background-color: $cl-white;
+      border: 1px solid $cl-cape-cod;
+    }
+
+    &:checked ~ .check-mark:after {
+      display: block;
+    }
+
+    &:disabled ~ .check-mark {
+      background-color: $cl-white;
+      border: 1px solid $cl-cape-cod;
+      opacity: 0.5;
+    }
+  }
+
+  .check-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: $cl-white;
+    border: 1px solid $cl-cape-cod;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 0;
+      width: 12px;
+      height: 22px;
+      border: solid $cl-mariner;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover input:not(:disabled) ~ .check-mark {
+    border: 1px solid $cl-mariner;
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.repository-item {
+  display: flex;
+  border: 1px solid $cl-silver-sand;
+  font-size: $size-14;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .meta,
+  .column {
+    padding: 16px;
+  }
+
+  .meta {
+    position: relative;
+    flex-grow: 1;
+
+    .fork {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 6.5px 18.5px;
+      background-color: $cl-mariner;
+      color: $cl-white;
+      font-size: $size-14;
+      font-weight: 700;
+    }
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 120px;
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: $cl-silver-sand;
+    flex-shrink: 0;
+
+    p {
+      font-weight: 700;
+      text-align: center;
+
+      @include mobile {
+        text-align: left;
+      }
+    }
+
+    @include mobile {
+      width: auto;
+      border-width: 1px 0 0;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      label {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+
+  a,
+  label {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  a {
+    width: calc(100% - 85px);
+    color: $cl-mariner;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}

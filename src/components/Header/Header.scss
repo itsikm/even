@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: $cl-mariner;
+  height: 50px;
+
+  @include mobile {
+    padding: 0 25px;
+  }
+
+  .logo {
+    width: 56px;
+  }
+}

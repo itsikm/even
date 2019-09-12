@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: $cl-mariner;
+  height: 50px;
+  font-size: $size-12;
+  color: $cl-white;
+
+  @include mobile {
+    padding: 0 25px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../scss/variables";
+
+.input {
+  font-size: $size-14;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    border: 1px solid $cl-corduroy;
+    padding: 15px;
+    font-size: inherit;
+    outline: none;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .error {
+    font-size: $size-14;
+    color: $cl-red;
+    margin-top: 5px;
+  }
+}

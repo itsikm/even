@@ -1,0 +1,17 @@
+@import "../../../scss/variables";
+
+.button {
+  background-color: $cl-mariner;
+  font-size: $size-14;
+  border: 0;
+  padding: 10px 30px;
+  color: $cl-white;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+
+  &:disabled {
+    background-color: $cl-cape-cod;
+    cursor: default;
+  }
+}
